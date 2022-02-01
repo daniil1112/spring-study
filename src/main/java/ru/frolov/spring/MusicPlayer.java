@@ -1,14 +1,15 @@
 package ru.frolov.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-    private Music music;
+    private final Music music;
 
     @Autowired
-    public MusicPlayer(Music music){
+    public MusicPlayer(@Qualifier("rockMusic") Music music){
         this.music = music;
     }
 
