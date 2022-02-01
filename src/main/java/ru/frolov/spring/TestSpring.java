@@ -8,10 +8,10 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-//Init\destroy методы не должны принимать ничего в аргументах. Названия методов и модификаторы доступа любые. Вызвращает любой тип значения
-        // Prototype не работает destroy
 
-        RockMusic rockMusic = context.getBean("rockMusicBean", RockMusic.class);
+
+        ClassicalMusic rockMusic = context.getBean("classicalMusicBean", ClassicalMusic.class);
+
 
         System.out.println(rockMusic.getSong());
 

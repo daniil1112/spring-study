@@ -6,11 +6,4 @@ public class RockMusic implements Music{
         return "Rock music";
     }
 
-    public void doInit(){
-        System.out.println("Doing init");
-    }
-
-    public void doDestroy(){
-        System.out.println("Doing destroy");
-    }
 }
