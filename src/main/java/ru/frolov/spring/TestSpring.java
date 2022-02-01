@@ -8,7 +8,7 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-//По дефолту бины создаются в режиме singleton - создание объекта один раз
+//Prototype - каждый вызов контекста - свой объект
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
         musicPlayer.setVolume(10);

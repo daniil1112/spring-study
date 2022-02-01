@@ -19,7 +19,9 @@
     
 
     <bean id="musicPlayer"
-    class="ru.frolov.spring.MusicPlayer">
+    class="ru.frolov.spring.MusicPlayer"
+    scope="prototype"
+    >
         <property name="music">
             <list>
                 <ref bean="classicalMusicBean" />
