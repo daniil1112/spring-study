@@ -8,4 +8,10 @@
           class="ru.frolov.spring.RockMusic">
 
     </bean>
+
+    <bean id="musicPlayer"
+    class="ru.frolov.spring.MusicPlayer">
+<!--        При создании бина в качестве аргумента объект выше-->
+        <constructor-arg ref="musicBean" />
+    </bean>
 </beans>
