@@ -10,22 +10,19 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="rockMusicBean"
-          class="ru.frolov.spring.RockMusic" />
-    <bean id="classicalMusicBean"
-          class="ru.frolov.spring.ClassicalMusic" />
-    <bean id="popMusicBean"
-          class="ru.frolov.spring.PopMusic" />
+          class="ru.frolov.spring.RockMusic"
+          init-method="doInit"
+          destroy-method="doDestroy"
+    />
+
 
     
 
     <bean id="musicPlayer"
     class="ru.frolov.spring.MusicPlayer"
-    scope="prototype"
-    >
+    scope="prototype">
         <property name="music">
             <list>
-                <ref bean="classicalMusicBean" />
-                <ref bean="popMusicBean" />
                 <ref bean="rockMusicBean" />
             </list>
         </property>
