@@ -1,19 +1,21 @@
 package ru.frolov.spring;
 
+import java.util.List;
+
 public class MusicPlayer {
-    private Music music;
+    private List<Music> music;
 
     private String name;
     private int volume;
 
-    public MusicPlayer(Music music){
+    public MusicPlayer(List<Music> music){
         this.music = music;
     }
 
     public MusicPlayer() {}
 
 
-    public void setMusic(Music music){
+    public void setMusic(List<Music> music){
         this.music = music;
     }
 
@@ -26,7 +28,9 @@ public class MusicPlayer {
     }
 
     public void playMusic(){
-        System.out.println("Playing: "+music.getSong());
+        for (Music musicItem: music){
+            System.out.println("Playing: "+musicItem.getSong());
+        }
     }
 
 
