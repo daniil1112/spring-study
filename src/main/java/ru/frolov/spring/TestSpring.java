@@ -9,9 +9,7 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-
-        ClassicalMusic rockMusic = context.getBean("classicalMusicBean", ClassicalMusic.class);
-
+        RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class);
 
         System.out.println(rockMusic.getSong());
 

@@ -1,15 +1,12 @@
 package ru.frolov.spring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music{
     @Override
     public String getSong() {
         return "classical music";
-    }
-
-    private ClassicalMusic(){}
-
-    public static ClassicalMusic getClassicalMusic(){
-        return new ClassicalMusic();
     }
 
     public void doInit(){
